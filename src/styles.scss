@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@import "variables";
+
+html {
+  height: 100%;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+button {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  background-color: transparent;
+  border: none;
+  color: var(--primary-font-color);
+
+  &.active {
+    svg {
+      fill: var(--active-color);
+    }
+    font-weight: bold;
+    color: var(--active-color);
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+svg {
+  fill: var(--primary-font-color);
+}
+
+a:hover, a:active, a:visited, a:focus {
+  text-decoration: none;
+  color: transparent;
+}
+
+#react-root {
+  height: 100%;
+}

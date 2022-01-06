@@ -1,0 +1,28 @@
+
+div.popup-component {
+    position: absolute;
+    z-index: 500;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: max-content;
+    height: max-content;
+
+    border-radius: 5px;
+    background-color: var(--bg-color);
+
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+
+    &.closed {
+        opacity: 0;
+        pointer-events: none;
+    }
+    &:hover {
+        opacity: 1;
+        pointer-events: all !important;
+    }
+}

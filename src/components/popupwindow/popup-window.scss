@@ -1,0 +1,70 @@
+.popup-window-component {
+    opacity: 0;
+    pointer-events: none;
+
+    &.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+
+    backdrop-filter: blur(2px);
+    background-color: var(--dark-transparency);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .popup {
+        position: relative;
+        width: 40%;
+        min-width: 500px;
+        height: 75%;
+        padding: 40px 10px 10px 10px;
+        box-sizing: border-box;
+        background: var(--bg-color);
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 #060606;
+
+        .content {
+            height: 100%;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                margin-top: 25px;
+                background: #ffffff0a;
+                width: 7px;
+                border-radius: 10px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: var(--dark-transparency);
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .close-button {
+        position: absolute;
+        top: 5px;
+        right: 0;
+
+        background: transparent;
+        border: none;
+
+        svg {
+            fill: var(--primary-font-color);
+            opacity: 0.5;
+            &:hover {
+                fill: red;
+                opacity: 1;
+            }
+        }
+    }
+}

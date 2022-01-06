@@ -1,0 +1,45 @@
+.timeline-bar-component {
+    --current: 0%;
+    --buffer: 0%;
+    --selection: 0%;
+
+    height: 3px;
+    margin: 5px 0;
+
+    position: relative;
+    width: 100%;
+
+    background-color: var(--light-transparency);
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+    overflow: hidden;
+
+    &:hover {
+        transform: scaleY(2);
+        &::after {
+            content: "";
+            position: absolute;
+            width: 3px;
+            transform: translateX(-50%);
+            height: 100%;
+            background-color: white;
+            margin-left: var(--selection);
+            z-index: 3;
+        }
+    }
+
+    .detail-bar {
+        position: absolute;
+        height: 100%;
+        pointer-events: none;
+    }
+    .time-bar {
+        background-color: var(--primary-accent-color);
+        z-index: 2;
+    }
+    .buffer-bar {
+        background-color: var(--light-transparency);
+        z-index: 1;
+    }
+}

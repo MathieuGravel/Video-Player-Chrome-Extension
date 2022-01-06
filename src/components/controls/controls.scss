@@ -1,0 +1,70 @@
+div.controls-component {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+
+    .controls-component-start {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .controls-component-end {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    .setting-control,
+    .playback-rate-control {
+        position: relative;
+        height: 100%;
+        display: flex;
+
+        .popup-content {
+            margin: 7px 10px;
+        }
+    }
+
+    .setting-control {
+        .setting-options-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            gap: 7px;
+        }
+    }
+
+    .playback-rate-control {
+        .playback-rate-options-wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 7px;
+        }
+    }
+
+    .volume-slider-component {
+        width: 7rem;
+    }
+
+    .current-time {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        *:nth-child(2) {
+            font-size: 1.35rem;
+        }
+    }
+}

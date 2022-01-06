@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.setting-component {
+    h1 {
+        margin: 0;
+    }
+    .shortcut-section {
+        margin: 0 10px;
+        .shortcut-list {
+            display: flex;
+            flex-direction: column;
+            margin-top: 15px;
+            gap: 12px;
+            .shortcut-list__element {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .shortcut-string {
+                    color: #ffffff7a;
+                }
+                .shortcut-description {
+                    margin: 0;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #ffffff75;
+                }
+                opacity: 0.6;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
