@@ -12,6 +12,7 @@ Features
 
 Installation
 ------------
+**From Chrome web store**: [Video Player](https://chrome.google.com/webstore/detail/video-player/phdogoeljjbggglcgpkiabgdkkncgohe)
 
 **From sources:**
 - Clone / Download the repo.
